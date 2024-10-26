@@ -37,6 +37,7 @@ namespace Linca_David_Lab2.Pages.Books
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
 
+
             if (Book == null)
             {
                 return NotFound();
@@ -53,6 +54,8 @@ namespace Linca_David_Lab2.Pages.Books
             return Page();
         }
 
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync(int? id, string[] selectedCategories)
         {
             if (id == null)
