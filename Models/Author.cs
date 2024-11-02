@@ -9,13 +9,14 @@ namespace Linca_David_Lab2.Models
         public string LastName { get; set; }
 
         [Display(Name = "Full Name")]
-        public string FullName
+        public String FullName
         {
             get
             {
                 return FirstName + " " + LastName;
             }
         }
+
         public ICollection<Book>? Books { get; set; }
     }
 }
