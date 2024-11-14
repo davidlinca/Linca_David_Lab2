@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Linca_David_Lab2.Data;
 using Linca_David_Lab2.Models;
 using Linca_David_Lab2.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Linca_David_Lab2.Pages.Categories
 {
+    [Authorize(Roles = "Admin")]
     public class IndexModel : PageModel
     {
         private readonly Linca_David_Lab2.Data.Linca_David_Lab2Context _context;
