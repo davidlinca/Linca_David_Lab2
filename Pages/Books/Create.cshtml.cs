@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Linca_David_Lab2.Data;
 using Linca_David_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Linca_David_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : BookCategoriesPageModel
     {
         private readonly Linca_David_Lab2.Data.Linca_David_Lab2Context _context;
